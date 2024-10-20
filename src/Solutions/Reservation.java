@@ -5,7 +5,6 @@ public class Reservation
     Airplane airplane = new Airplane();
     UserInfo userInfo = new UserInfo();
 
-    // 예약 가능 여부 확인
     public boolean reserve(int flightIndex) 
     {
         if (airplane.isAvailable(flightIndex)) 
@@ -20,7 +19,6 @@ public class Reservation
         }
     }
 
-    // 사용자 정보 설정
     public void setFirstName(String firstName) 
     {
         userInfo.setFirstName(firstName);
@@ -36,7 +34,6 @@ public class Reservation
         userInfo.setPhoneNumber(phoneNumber);
     }
 
-    // 예약 확인 및 업데이트
     public void confirmReservation(int flightIndex) 
     {
         airplane.reserveFlight(flightIndex);
@@ -45,7 +42,6 @@ public class Reservation
         System.out.println("Flight: " + airplane.getAirplace(String.valueOf(flightIndex)));
     }
 
-    // 항공편 리스트 출력
     public void printAirplaneList() 
     {
         String[] airplaneList = airplane.getAirpleList();

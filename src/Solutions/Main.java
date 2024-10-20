@@ -4,7 +4,7 @@ public class Main implements User
 {
     public static void main(String[] args) 
     {
-        Reservation reservation = new Reservation(); // 예약 객체 초기화
+        Reservation reservation = new Reservation();
         boolean stop = false;
         String userAnswer = "";
 
@@ -15,7 +15,6 @@ public class Main implements User
             userAnswer = User.userInput();
             int flightIndex = Integer.parseInt(userAnswer.split("\\.")[0]) - 1;
 
-            // 예약이 불가능한 경우
             if (!reservation.reserve(flightIndex)) 
             {
                 continue;
@@ -30,7 +29,6 @@ public class Main implements User
         } while (!stop);
     }
 
-    // 항공편 예약
     public static void bookAirplane(Reservation reservation, int flightIndex) 
     {
         System.out.println();
@@ -55,7 +53,7 @@ public class Main implements User
             } 
             catch (IllegalArgumentException e) 
             {
-                System.out.println(e.getMessage()); // Print error message
+                System.out.println(e.getMessage());
             }
         }
         
@@ -63,7 +61,6 @@ public class Main implements User
         System.out.println("Reserve is completed!");
     }
 
-    // 항공편 리스트 출력
     public static void printListAirplane(Reservation reservation) 
     {
         reservation.printAirplaneList();

@@ -2,7 +2,6 @@ package Solutions;
 
 public class Airplane 
 {
-    // 항공편 리스트를 영어로 번역
     private final String[] airplaneList = 
     {
         "1. KE123: Korean Air's international flight (Seoul(ICN) - Tokyo(HND))",
@@ -27,44 +26,37 @@ public class Airplane
         "20. TW345: T'way Air's international flight (Seoul(ICN) - Pacific(PPT))"
     };
 
-    // 예약 가능한 여부 확인 리스트
     private final boolean[] reserveAvailableList = 
     {
         true, false, true, false, true, true, false, true, true, false, 
         true, true, false, true, true, false, true, true, true, false
     };
 
-    // 리스트 번호의 정보 받기
     public String getAirplace(String i) 
     {
         return airplaneList[Integer.parseInt(i)];
     }
 
-    // 항공편 리스트 모두 받기
     public String[] getAirpleList() 
     {
         return airplaneList;
     }
 
-    // 예약 가능한 항공편 리스트 받기
     public boolean[] getReserveAvailableList() 
     {
         return reserveAvailableList;
     }
 
-    // 리스트 번호의 항공편 코드만 받기
     public String getFlightCode(String n) 
     {
         return airplaneList[Integer.parseInt(n)].substring(3, 8);
     }
 
-    // 특정 항공편의 예약 가능 여부 확인
     public boolean isAvailable(int index) 
     {
         return reserveAvailableList[index];
     }
 
-    // 예약 상태 업데이트
     public void reserveFlight(int index) 
     {
         reserveAvailableList[index] = false;
