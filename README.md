@@ -65,4 +65,3 @@ The application includes unit tests for the core functionalities using JUnit:
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
