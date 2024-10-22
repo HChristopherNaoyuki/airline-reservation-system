@@ -60,3 +60,9 @@ The application includes unit tests for the core functionalities using JUnit:
 - **AirplaneTest**: Tests flight retrieval and reservation status.
 - **ReservationTest**: Tests reservation logic and confirmation.
 - **UserInfoTest**: Tests user information handling and validation.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
